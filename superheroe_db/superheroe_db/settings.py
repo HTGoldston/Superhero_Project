@@ -75,8 +75,16 @@ WSGI_APPLICATION = 'superheroe_db.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mysql.connection.django',
+        'NAME': 'superheroes_mysql_db',
+        'USER': 'root',
+        'PASSWORD': 'P@$$w0rd1234',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'OPTIONS': {
+            'autocommit': True
+        }
+
     }
 }
 
